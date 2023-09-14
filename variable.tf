@@ -1,9 +1,8 @@
-provider "aws" {
-    region = "us-east-1"  
+variable "instance_count" {
+  default = 2
 }
 
-resource "aws_s3_bucket" "my_bucket" {
-  count = var.instance_count
-  bucket = "my-terraform565-bucket8687-${count.index + 1}"
-  acl = var.acl_value
+variable "acl_value" {
+  default = "private"
 }
+
