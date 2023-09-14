@@ -3,6 +3,6 @@ variable "instance_count" {
 }
 
 variable "acl_value" {
-  default = "private"
+  default = "public"
 }
 
